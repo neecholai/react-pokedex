@@ -7,13 +7,14 @@ function Pokedex(props) {
     <div className='Pokedex'>
       <div className='Pokedex-title'>Pokedex</div>
       <div className='Pokedex-container'>
-        { props.Pokecards.map((card, index) => {
+        { props.pokecards.map((card, index) => {
             return ( 
-              <div key={index}> <Pokecard
+              <Pokecard
+                key={index}
                 id={card.id}
                 name={card.name}
                 type={card.type}
-                base_experience={card.base_experience} /> </div>
+                baseExperience={card.base_experience} />
             );
           })
         }
@@ -23,7 +24,7 @@ function Pokedex(props) {
 }
 
 Pokedex.defaultProps = {
-  Pokecards: [
+  pokecards: [
     {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
     {id: 7, name: 'Squirtle', type: 'water', base_experience: 63},
     {id: 11, name: 'Metapod', type: 'bug', base_experience: 72},
