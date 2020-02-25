@@ -1,0 +1,17 @@
+.Pokedex {
+  background-color: white;
+  margin: 2%;
+}
+
+.Pokedex-title {
+  color: lightgray;
+  text-align: center;
+  font-size: 32px;
+}
+
+.Pokedex-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+}
